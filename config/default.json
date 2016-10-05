@@ -1,0 +1,28 @@
+{
+  "electrode": {
+    "registerPluginsTimeout": 100000
+  },
+  "plugins": {
+    "inert": {
+      "enable": true
+    },
+    "electrodeStaticPaths": {
+      "enable": true,
+      "options": {
+        "pathPrefix": "dist"
+      }
+    },
+    "webapp": {
+      "module": "./server/plugins/webapp",
+      "options": {
+        "paths": {
+          "/{args*}": {
+            "content": {
+              "module": "./server/views/index-view"
+            }
+          }
+        }
+      }
+    }
+  }
+}
